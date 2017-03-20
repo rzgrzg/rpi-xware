@@ -1,5 +1,6 @@
 迅雷远程下载 xware-docker 镜像
-改编自https://github.com/zwh8800/xware，树莓派3测试通过。
+改编自https://github.com/zwh8800/xware
+树莓派3测试通过。
 
 使用方法 
 docker run --name xware --restart=always -p 9000:9000 -v /media/pi/USB-DISK/:/data -d rzgrzg/xware 
