@@ -1,6 +1,7 @@
-FROM resin/rpi-raspbian:wheezy
+docker run centos-cmd echo hello edwardsbeanFROM hypriot/rpi-alpine-scratch 
 MAINTAINER rzg <134161558@qq.com>
 
+USER root
 WORKDIR /xware
 ADD EmbedThunderManager /xware
 ADD ETMDaemon /xware
@@ -8,8 +9,9 @@ ADD portal /xware
 ADD vod_httpserver /xware
 
 ADD monitor.sh /xware
-RUN chmod +x monitor.sh && chmod +x portal
-RUN ln -s /lib/ld-linux-armhf.so.3 /lib/ld-linux.so.3
+RUN chmod 755 /xware/monitor.sh
+RUN chmod 755 /xware/portal
+
 
 VOLUME /data
 

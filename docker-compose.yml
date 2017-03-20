@@ -1,0 +1,6 @@
+xware:
+  image: rzgrzg/xware
+  restart: always
+  volumes:
+    - ./cfg:/xware/cfg
+    - ./data:/data
